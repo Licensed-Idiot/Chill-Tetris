@@ -1,11 +1,24 @@
-[gd_scene load_steps=2 format=3 uid="uid://c4j05v6wfo823"]
+[gd_scene load_steps=6 format=3 uid="uid://mfr45f17gj1y"]
 
-[ext_resource type="Script" path="res://Scripts/tetromino.gd" id="1_egcr8"]
+[ext_resource type="Script" path="res://Scripts/tetromino.gd" id="1_35vkn"]
+[ext_resource type="AudioStream" uid="uid://86eypf2wvd7v" path="res://Sounds/rotate.mp3" id="2_7t20n"]
+[ext_resource type="Script" path="res://Scripts/sfx_click.gd" id="3_bbn0n"]
+[ext_resource type="AudioStream" uid="uid://xggrodx3v0ca" path="res://Sounds/move.wav" id="4_u2qgf"]
+[ext_resource type="Script" path="res://Scripts/sfx_move.gd" id="5_w37pc"]
 
 [node name="Tetromino" type="Node2D"]
-script = ExtResource("1_egcr8")
+script = ExtResource("1_35vkn")
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true
+
+[node name="sfx_click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_7t20n")
+volume_db = -6.0
+script = ExtResource("3_bbn0n")
+
+[node name="sfx_move" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_u2qgf")
+script = ExtResource("5_w37pc")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

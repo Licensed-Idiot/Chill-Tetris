@@ -18,6 +18,8 @@ var pieces = []
 var other_tetrominoes_pieces = [] 
 var ghost_tetromino
 
+@onready var sfx_click = $sfx_click
+@onready var sfx_move = $sfx_move
 @onready var timer = $Timer
 @onready var piece_scene = preload("res://Scenes/piece.tscn")
 @onready var ghost_tetromino_scene = preload("res://Scenes/ghost_tetromino.tscn")
@@ -43,7 +45,6 @@ func _ready():
 	else: 
 		timer.stop()
 		set_process_input(false)
-		
 
 func hard_drop_ghost():
 	var final_hard_drop_position
@@ -71,19 +72,23 @@ func hard_drop_ghost():
 func _input(_event):
 	if Input.is_action_just_pressed("left"):
 		move(Vector2.LEFT)
+		sfx_move.randplay()
 	elif Input.is_action_just_pressed("right"):
 		move(Vector2.RIGHT)
+		sfx_move.randplay()
 	elif Input.is_action_just_pressed("down"):
 		move(Vector2.DOWN)
+		sfx_move.randplay()
 	elif Input.is_action_just_pressed("hard_drop"):
 		hard_drop()
 	elif Input.is_action_just_pressed("rotate_left"):
 		rotate_tetromino(-1)
+		sfx_click.randplay()
 	elif Input.is_action_just_pressed("rotate_right"):
 		rotate_tetromino(1)
+		sfx_click.randplay()
 
 func move(direction: Vector2) -> bool:
-
 	var new_position = calculate_global_position(direction, global_position)
 	if new_position:
 		global_position = new_position
@@ -91,7 +96,7 @@ func move(direction: Vector2) -> bool:
 			hard_drop_ghost.call_deferred()
 		return true
 	return false
-	
+
 func calculate_global_position(direction: Vector2, starting_global_position: Vector2):
 	#TODO: check for collision with other tetrominos
 	print_debug(is_colliding_with_other_tetrominos(direction, starting_global_position))
@@ -130,7 +135,6 @@ func rotate_tetromino(direction: int):
 		apply_rotation(-direction)
 	
 	hard_drop_ghost.call_deferred()
-	
 
 func test_wall_kicks(rotation_index: int, rotation_direction: int):
 	var wall_kick_index = get_wall_kick_index(rotation_index, rotation_direction)

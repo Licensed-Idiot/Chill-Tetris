@@ -89,3 +89,7 @@ func get_all_pieces():
 	for line in get_lines():
 		pieces.append_array(line.get_children())
 	return pieces
+
+#func _process(_delta):
+	#if BackroundMusic.playing == false:
+		#BackroundMusic.play()

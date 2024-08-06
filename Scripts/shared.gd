@@ -52,6 +52,5 @@ var data = {
 	Tetromino.Z: preload("res://Resources/z_piece_data.tres")
 }
 
-var clockwise_rotation_matrix = [Vector2(0, -1), Vector2(1, 0)]
-var counter_clockwise_rotation_matrix = [Vector2(0,1), Vector2(-1, 0)]
-
+var clockwise_rotation_matrix = [Vector2(0,-1), Vector2(1,0)]
+var counter_clockwise_rotation_matrix = [Vector2(0,1), Vector2(-1,0)]

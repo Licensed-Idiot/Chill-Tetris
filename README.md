@@ -1,6 +1,9 @@
 # Chill Tetris
 A tetris clone but with chill sounds and music
 
+
+![image](https://github.com/user-attachments/assets/8c1ec62e-fdb7-419a-a187-7a25320d7c0d)
+
 ## All sounds and music are being used under the CC0 License
 ### Go check out the creators:
 Backround Music: [Chill Background Music by Seth_Makes_Sounds](https://freesound.org/s/670039/) -- License: Creative Commons 0

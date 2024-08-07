@@ -39,6 +39,9 @@ text = "RESTART"
 layout_mode = 2
 text = "QUIT"
 
+[node name="OptionsButton" type="Button" parent="GameOverMenu/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
 [node name="PauseMenu" parent="." instance=ExtResource("2_3ckck")]
 
 [connection signal="pressed" from="GameOverMenu/PanelContainer/MarginContainer/VBoxContainer/RestartButton" to="." method="_on_button_pressed"]

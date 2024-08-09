@@ -1,48 +1,26 @@
-[gd_scene load_steps=3 format=3 uid="uid://j1aprtrwri6o"]
+[gd_scene load_steps=5 format=3 uid="uid://j1aprtrwri6o"]
 
 [ext_resource type="Script" path="res://Scripts/ui.gd" id="1_l21hk"]
+[ext_resource type="PackedScene" uid="uid://dwugto6ux4704" path="res://Scenes/game_over_menu.tscn" id="2_1omhy"]
 [ext_resource type="PackedScene" uid="uid://k6ya00t6jvsl" path="res://Scenes/pause_menu.tscn" id="2_3ckck"]
+[ext_resource type="PackedScene" uid="uid://bx1srweqsxcq5" path="res://Scenes/options_menu.tscn" id="3_n211v"]
 
 [node name="UI" type="CanvasLayer"]
 script = ExtResource("1_l21hk")
 
-[node name="GameOverMenu" type="CenterContainer" parent="."]
-visible = false
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="GameOverMenu" parent="." instance=ExtResource("2_1omhy")]
 
-[node name="PanelContainer" type="PanelContainer" parent="GameOverMenu"]
+[node name="OptionsMenu" parent="GameOverMenu" instance=ExtResource("3_n211v")]
 layout_mode = 2
-
-[node name="MarginContainer" type="MarginContainer" parent="GameOverMenu/PanelContainer"]
-layout_mode = 2
-theme_override_constants/margin_left = 16
-theme_override_constants/margin_top = 16
-theme_override_constants/margin_right = 16
-theme_override_constants/margin_bottom = 16
-
-[node name="VBoxContainer" type="VBoxContainer" parent="GameOverMenu/PanelContainer/MarginContainer"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="GameOverMenu/PanelContainer/MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "GAME OVER"
-
-[node name="RestartButton" type="Button" parent="GameOverMenu/PanelContainer/MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "RESTART"
-
-[node name="Quit" type="Button" parent="GameOverMenu/PanelContainer/MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "QUIT"
-
-[node name="OptionsButton" type="Button" parent="GameOverMenu/PanelContainer/MarginContainer/VBoxContainer"]
-layout_mode = 2
+anchors_preset = 0
 
 [node name="PauseMenu" parent="." instance=ExtResource("2_3ckck")]
 
-[connection signal="pressed" from="GameOverMenu/PanelContainer/MarginContainer/VBoxContainer/RestartButton" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="GameOverMenu/PanelContainer/MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[node name="OptionsMenu" parent="PauseMenu" instance=ExtResource("3_n211v")]
+layout_mode = 1
+
+[connection signal="options" from="GameOverMenu" to="." method="_on_options_button_pressed"]
+[connection signal="quit" from="GameOverMenu" to="." method="_on_quit_pressed"]
+[connection signal="restart" from="GameOverMenu" to="." method="_on_button_pressed"]
+[connection signal="exit_options_menu" from="GameOverMenu/OptionsMenu" to="." method="_on_options_menu_exit_options_menu"]
+[connection signal="exit_options_menu" from="PauseMenu/OptionsMenu" to="PauseMenu" method="_on_options_menu_exit_options_menu"]

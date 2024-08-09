@@ -1,6 +1,6 @@
 [gd_resource type="Resource" load_steps=3 format=3 uid="uid://cy6yw65vljc0x"]
 
-[ext_resource type="Texture2D" uid="uid://d3fwskwbtiv1h" path="res://Assets/Red.png" id="1_aufho"]
+[ext_resource type="Texture2D" uid="uid://y1lupfkvfy68" path="res://Assets/Red.png" id="1_aufho"]
 [ext_resource type="Script" path="res://Scripts/piece_data.gd" id="2_861dc"]
 
 [resource]

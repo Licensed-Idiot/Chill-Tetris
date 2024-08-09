@@ -15,4 +15,6 @@ A tetris clone but with chill sounds and music
 * Make an android and iOS version
 * Add new options to pause & game over menu
   * Settings menu/options menu
-  * Music on/off checkbox
+    * Sound settings
+    * Keybindings settings
+    * Graphics settings

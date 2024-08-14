@@ -35,6 +35,12 @@ folder_colors={
 "res://Sounds/": "orange"
 }
 
+[importer_defaults]
+
+animation_library={
+"animation/fps": 100.0
+}
+
 [input]
 
 left={

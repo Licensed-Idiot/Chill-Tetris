@@ -62,4 +62,5 @@ horizontal_alignment = 1
 [node name="sfx_drop" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_5m4xh")
 volume_db = 3.0
+bus = &"SFX"
 script = ExtResource("9_81oyc")

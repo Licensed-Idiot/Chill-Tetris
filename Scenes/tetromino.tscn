@@ -15,10 +15,12 @@ autostart = true
 [node name="sfx_click" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_7t20n")
 volume_db = -6.0
+bus = &"SFX"
 script = ExtResource("3_bbn0n")
 
 [node name="sfx_move" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_u2qgf")
+bus = &"SFX"
 script = ExtResource("5_w37pc")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

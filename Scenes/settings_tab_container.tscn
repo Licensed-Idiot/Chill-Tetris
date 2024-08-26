@@ -28,8 +28,10 @@ current_tab = 1
 [node name="Sound" type="TabBar" parent="TabContainer"]
 visible = false
 layout_mode = 2
+metadata/_tab_index = 0
 
 [node name="MarginContainer" type="MarginContainer" parent="TabContainer/Sound"]
+clip_contents = true
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -62,6 +64,7 @@ bus_name = "SFX"
 
 [node name="Controls" type="TabBar" parent="TabContainer"]
 layout_mode = 2
+metadata/_tab_index = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="TabContainer/Controls"]
 layout_mode = 1
@@ -85,6 +88,7 @@ alignment = 1
 
 [node name="HotkeyRebindButton" parent="TabContainer/Controls/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("2_8ygq0")]
 layout_mode = 2
+action_name = "left"
 
 [node name="HotkeyRebindButton2" parent="TabContainer/Controls/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("2_8ygq0")]
 layout_mode = 2
@@ -97,3 +101,16 @@ action_name = "right"
 [node name="HotkeyRebindButton4" parent="TabContainer/Controls/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("2_8ygq0")]
 layout_mode = 2
 action_name = "hard_drop"
+
+[node name="HotkeyRebindButton5" parent="TabContainer/Controls/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("2_8ygq0")]
+layout_mode = 2
+action_name = "rotate_left"
+
+[node name="HotkeyRebindButton6" parent="TabContainer/Controls/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("2_8ygq0")]
+layout_mode = 2
+action_name = "rotate_right"
+
+[node name="VSeparator" type="VSeparator" parent="TabContainer/Controls/MarginContainer/ScrollContainer/VBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2

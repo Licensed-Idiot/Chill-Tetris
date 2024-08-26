@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/hotkey_rebind_button.gd" id="1_6kmrp"]
 
-[node name="HotkeyRebindButton" type="Control"]
+[node name="HotkeyRebindButton" type="Control" groups=["hotkey_button"]]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

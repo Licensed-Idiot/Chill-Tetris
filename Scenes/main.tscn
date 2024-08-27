@@ -1,12 +1,12 @@
 [gd_scene load_steps=9 format=3 uid="uid://dnrbk8ox2wjc"]
 
-[ext_resource type="Texture2D" uid="uid://8d242jcn8u8f" path="res://Assets/Border.png" id="1_cxla0"]
-[ext_resource type="Texture2D" uid="uid://bkvuvdub843d6" path="res://Assets/Grid.png" id="2_15t58"]
+[ext_resource type="Texture2D" uid="uid://djf0fjtjf5qru" path="res://Assets/Border.png" id="1_cxla0"]
+[ext_resource type="Texture2D" uid="uid://lgf1n4imii5r" path="res://Assets/Grid.png" id="2_15t58"]
 [ext_resource type="Script" path="res://Scripts/piece_spawner.gd" id="3_kg1lm"]
 [ext_resource type="Script" path="res://Scripts/board.gd" id="4_gs607"]
 [ext_resource type="PackedScene" uid="uid://mfr45f17gj1y" path="res://Scenes/tetromino.tscn" id="5_5k3g1"]
 [ext_resource type="PackedScene" uid="uid://j1aprtrwri6o" path="res://Scenes/ui.tscn" id="6_62hip"]
-[ext_resource type="AudioStream" uid="uid://b824r2mog4ueh" path="res://Sounds/hard_drop.wav" id="8_5m4xh"]
+[ext_resource type="AudioStream" uid="uid://bjxqpfofxlpsj" path="res://Sounds/hard_drop.wav" id="8_5m4xh"]
 [ext_resource type="Script" path="res://Scripts/sfx_click.gd" id="9_81oyc"]
 
 [node name="main" type="Node"]

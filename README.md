@@ -18,3 +18,4 @@ A tetris clone but with chill sounds and music
     * [x] Sound settings
     * [x] Keybindings settings
     * [ ] Graphics settings
+    * [ ] Save Settings

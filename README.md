@@ -11,9 +11,9 @@ A tetris clone but with chill sounds and music
 * Rotate SFX: [Click (2).mp3 by 7778](https://freesound.org/s/202313/) -- License: Creative Commons 0
 
 # TODO
-* Add wayland support for linux
-* Make an android and iOS version
-* Add new options to pause & game over menu
+* [x] Add wayland support for linux
+* [ ] Make an android and iOS version
+* [x] Add new options to pause & game over menu
   * [x] Settings menu/options menu
     * [x] Sound settings
     * [x] Keybindings settings
